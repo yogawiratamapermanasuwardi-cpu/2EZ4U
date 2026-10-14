@@ -33,6 +33,34 @@ class ProyekUI:
         self.listbox_menu.pack(padx=5, pady=5, fill=tk.Y, expand=True)
         self.listbox_menu.bind("<<ListboxSelect>>", self.on_menu_select)
 
+        tk.Label(self.frame_kiri, text="M2 - ANTREAN PESANAN", bg="#e0e0e0", font=("Arial", 10, "bold")).pack(pady=5)
+        self.listbox_menu_m2 = tk.Listbox(self.frame_kiri, selectmode=tk.SINGLE, height=10, width=35)
+        m2_items = [
+            "ANTREAN - ENQUEUE (tambah pesanan)",
+            "ANTREAN - DEQUEUE (proses pesanan)",
+            "ANTREAN - PUSH DEPAN (untuk pesanan VIP/prioritas)",
+            "ANTREAN - POP BELAKANG",
+            "ANTREAN - PEEK",
+            "ANTREAN - LIHAT ANTREAN"
+        ]
+        for item in m2_items:
+            self.listbox_menu_m2.insert(tk.END, item)
+        self.listbox_menu_m2.pack(padx=5, pady=5, fill=tk.Y, expand=True)
+        self.listbox_menu_m2.bind("<<ListboxSelect>>", self.on_menu_select_m2)
+
+        tk.Label(self.frame_kiri, text="M3 - TUMPUKAN PESANAN", bg="#e0e0e0", font=("Arial", 10, "bold")).pack(pady=5)
+        self.listbox_menu_m3 = tk.Listbox(self.frame_kiri, selectmode=tk.SINGLE, height=10, width=35)
+        m3_items = [
+            "TUMPUKAN - PUSH (tambah pesanan)",
+            "TUMPUKAN - POP (hapus pesanan)",
+            "TUMPUKAN - PEEK (lihat pesanan teratas)",
+            "TUMPUKAN - LIHAT TUMPUKAN"
+        ]
+        for item in m3_items:
+            self.listbox_menu_m3.insert(tk.END, item)
+        self.listbox_menu_m3.pack(padx=5, pady=5, fill=tk.Y, expand=True)
+        self.listbox_menu_m3.bind("<<ListboxSelect>>", self.on_menu_select_m3)
+
         # --- PANEL KANAN: Form & Hasil ---
         self.frame_kanan = tk.Frame(self.root)
         self.frame_kanan.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=5, pady=5)
@@ -66,6 +94,12 @@ class ProyekUI:
         selection = self.listbox_menu.curselection()
         if selection:
             self.menu_aktif = self.listbox_menu.get(selection[0])
+            self.lbl_judul.config(text=self.menu_aktif)
+
+    def on_menu_select_m2(self, event):
+        selection = self.listbox_menu_m2.curselection()
+        if selection:
+            self.menu_aktif = self.listbox_menu_m2.get(selection[0])
             self.lbl_judul.config(text=self.menu_aktif)
 
     def eksekusi_aksi(self):

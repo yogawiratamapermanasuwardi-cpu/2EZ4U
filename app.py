@@ -3,6 +3,9 @@ import time
 import os
 from frontend.ui import ProyekUI
 from backend.m1_pesanan import Array, LinkList
+from backend.m2_antrean import AntreanMelingkar, Tumpukan
+
+antrean = AntreanMelingkar(kapasitas=8)
 
 class MainApp:
     def __init__(self):
@@ -10,7 +13,9 @@ class MainApp:
         # Inisialisasi struktur data M1
         self.arr = Array()
         self.ll = LinkList()
-        
+        # Inisialisasi struktur data M2
+        self.antrean = antrean
+
         # Inisialisasi UI dan pasang fungsi handler
         self.ui = ProyekUI(self.root, self.proses_aksi)
 
