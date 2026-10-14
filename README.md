@@ -20,9 +20,9 @@ Pengembangan dilakukan secara bertahap. Saat ini, fitur yang telah diselesaikan 
     *   Implementasi struktur data Queue (Antrean) untuk manajemen pemrosesan pesanan.
     *   Implementasi struktur data Stack (Tumpukan) untuk menjalankan fitur pembatalan operasi atau Undo.
       
-*   M3: Laporan Terurut (Sorting)**[cite: 2]
-    *   Penerapan berbagai macam algoritma pengurutan (sorting) seperti *insertion sort*[cite: 2, 3].
-    *   Menyajikan laporan data pesanan yang sudah terurut[cite: 2].
+*   M3: Laporan Terurut (Sorting)**
+    *   Penerapan berbagai macam algoritma pengurutan (sorting) seperti *insertion sort*.
+    *   Menyajikan laporan data pesanan yang sudah terurut.
 
 ** Prasyarat dan Cara Menjalankan
    **Kebutuhan Sistem**: Python 3.11 atau versi lebih baru.
