@@ -15,9 +15,14 @@ Pengembangan dilakukan secara bertahap. Saat ini, fitur yang telah diselesaikan 
     *   Menyimpan data pesanan ke dalam struktur Array dan Linked List secara paralel untuk membandingkan performa keduanya.
     *   Mendukung operasi lihat, tambah, dan hapus pesanan.
     *   Implementasi aturan bisnis penyisipan pesanan: Reguler (diurutkan di belakang), Prioritas (menyisip ke tengah), dan VIP (langsung di urutan pertama).
+      
 *   M2: Antrean dan Tumpukan**
     *   Implementasi struktur data Queue (Antrean) untuk manajemen pemrosesan pesanan.
     *   Implementasi struktur data Stack (Tumpukan) untuk menjalankan fitur pembatalan operasi atau Undo.
+      
+*   M3: Laporan Terurut (Sorting)**[cite: 2]
+    *   Penerapan berbagai macam algoritma pengurutan (sorting) seperti *insertion sort*[cite: 2, 3].
+    *   Menyajikan laporan data pesanan yang sudah terurut[cite: 2].
 
 ** Prasyarat dan Cara Menjalankan
    **Kebutuhan Sistem**: Python 3.11 atau versi lebih baru.
